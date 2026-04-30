@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang='pt-BR'>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Page Title</title>
+    <link rel='stylesheet' href='main.css'>
+</head>
+<body>
+    <script>
+        let Resposta_Do_Usuario=parseInt(prompt("Quantos alunos há na sala?"));
+        let Contador=0 ,Quantidade_De_Menores_De_Idade=0,Quantidade_De_Alunos_Adultos=0,Quantidade_De_Alunos_Idosos=0;
+        while(Contador<Resposta_Do_Usuario){
+            Nome_Do_Aluno=prompt("Digite o nome do aluno");
+            Idade_Do_Aluno=parseInt(prompt("Digite a idade do aluno"))
+            if(Idade_Do_Aluno<=18){
+                alert(Nome_Do_Aluno+" é menor de idade");
+                Quantidade_De_Menores_De_Idade+=1;
+            }else if(Idade_Do_Aluno>18 && Idade_Do_Aluno<60){
+                alert(Nome_Do_Aluno+" é de maior");
+                Quantidade_De_Alunos_Adultos+=1;
+            }else{
+                alert(Nome_Do_Aluno+" é idoso");
+                Quantidade_De_Alunos_Idosos+=1;
+            }
+            Contador+=1;
+        }
+        alert("Na sala há "+Quantidade_De_Menores_De_Idade+" alunos que são menores de idade");
+        alert("Na sala há "+Quantidade_De_Alunos_Adultos+" aluno(os) que são maiores de idade");
+        alert("Na sala há "+Quantidade_De_Alunos_Idosos+" aluno(os) que são idosos");
+    </script>
+</body>
+</html>
